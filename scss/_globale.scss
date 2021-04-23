@@ -4,6 +4,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: $font;
 }
@@ -50,6 +53,14 @@ input {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-row {
+  flex-direction: row;
 }
 .center {
   width: 80%;
