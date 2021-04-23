@@ -1,0 +1,25 @@
+{
+  "name": "authenticate",
+  "version": "2.0.0",
+  "description": "This project is a sign up and login form page, build with Html5, Sass and ES6.",
+  "main": "app.js",
+  "homepage": "https://authenticate.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LahoucineABOULHASSAN/authenticate"
+  },
+  "scripts": {
+    "sass": "sass scss:src/css",
+    "watch": "sass --watch scss:src/css"
+  },
+  "author": "Lahoucine Aboulhassan",
+  "keywords": [
+    "html5",
+    "sass",
+    "css"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
+}

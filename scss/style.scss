@@ -1,0 +1,105 @@
+// ------ IMPORTS ------ \\
+@import "config";
+@import "globale";
+// ------ MAIN STYLE ------ \\
+main#main-content {
+  text-align: center;
+  section#right-side,
+  aside#left-side {
+    min-height: 100vh;
+  }
+  // ------ RIGHT SIDE ------ \\
+  section#right-side {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background: $bg;
+    #login,
+    #register {
+      border: none;
+      border-radius: 10px;
+      padding: 1rem;
+      background: rgba($dark-color, 0.5);
+    }
+    #box1,
+    #box2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #box2 {
+      width: 90%;
+      display: none;
+    }
+    #box3 {
+      width: 100%;
+      display: none;
+      margin: 1rem 0;
+    }
+    .fadeIn {
+      animation: fade_in;
+      animation-duration: 3s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      &#box2,
+      &#box3 {
+        display: block;
+      }
+      @keyframes fade_in {
+        0% {
+          visibility: hidden;
+          opacity: 0;
+        }
+        100% {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    .fadeOut {
+      animation: fade_out;
+      animation-duration: 3s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      @keyframes fade_out {
+        0% {
+          visibility: visible;
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+        100% {
+          visibility: hidden;
+          opacity: 0;
+          transform: translate(-50%, -100vh);
+        }
+      }
+    }
+    .fadeOut2 {
+      animation: fade_out2;
+      animation-duration: 3s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      @keyframes fade_out2 {
+        0% {
+          visibility: visible;
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+        100% {
+          visibility: hidden;
+          opacity: 0;
+          transform: translate(0, -100vh);
+        }
+      }
+    }
+  }
+  // ------ LEFT SIDE ------ \\
+  aside#left-side {
+    display: flex;
+    background: $bg-color;
+    color: setColor($bg-color);
+  }
+}
+@import "screens";

@@ -1,0 +1,31 @@
+// ------ IMPORTS ------ \\
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap");
+// ------ VARIABLES ------ \\
+$primary-color: #3ca094;
+$secondary-color: #9dcbdc;
+$dark-color: #232323;
+$light-color: #d9d9d9;
+$bg-color: #121213;
+
+$bg: linear-gradient(-45deg, #017488 25%, #cef2ff 85%);
+
+$font: "Open Sans Condensed", sans-serif;
+$text-font: "Arial", "Helvetica", sans-serif;
+// ------ FUNCTIONS ------ \\
+@function setColor($bg-color) {
+  @if (lightness($bg-color) > 40) {
+    @return #222;
+  } @else {
+    @return #eee;
+  }
+}
+// ------ MIXINS ------ \\
+@mixin slowChange() {
+  transition: all 0.9 ease-out;
+}
+// MEDIA QUERY MIXINS \\
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}

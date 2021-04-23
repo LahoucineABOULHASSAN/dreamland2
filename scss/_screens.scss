@@ -1,0 +1,27 @@
+//-- TABLETS IPAD MINILAPTOP --\\
+@include mediaSm {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  main#main-content {
+    section#right-side,
+    aside#left-side {
+      min-height: 420px;
+      .center {
+        margin: 5vh auto;
+        width: 90%;
+      }
+    }
+    section#right-side {
+      figure {
+        margin: auto;
+        img {
+          width: 145px;
+        }
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
