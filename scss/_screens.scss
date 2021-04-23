@@ -3,6 +3,9 @@
   .grid {
     grid-template-columns: 1fr;
   }
+  .flex-row {
+    justify-content: space-between;
+  }
   main#main-content {
     display: flex;
     flex-direction: column-reverse;

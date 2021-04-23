@@ -67,7 +67,7 @@ input::placeholder {
 .flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .flex-row {
@@ -106,7 +106,7 @@ input::placeholder {
   border: none;
   border-radius: 5px;
   padding: 1rem 1rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem;
 }
 .btn:focus {
   outline: none;
@@ -253,6 +253,10 @@ main#main-content aside#left-side {
 @media screen and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .flex-row {
+    justify-content: space-between;
   }
 
   main#main-content {
