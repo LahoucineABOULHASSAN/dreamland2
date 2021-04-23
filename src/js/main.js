@@ -33,5 +33,8 @@ function fadeRegister() {
   }
 }
 function fadeOut() {
+  const sticky = document.querySelector("#right-side").offsetTop;
+  document.body.scrollTop = sticky - 1; // For Safari
+  document.documentElement.scrollTop = sticky - 1;
   logo.classList.add("fadeOut");
 }
